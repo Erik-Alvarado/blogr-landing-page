@@ -1,0 +1,48 @@
+footer {
+  height: 100%;
+  background-color: $veryDarkBlackBlue;
+  padding: 4rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 0 5rem 0 0;
+}
+.foot-nav {
+  a {
+    .foot-logo {
+      height: 2rem;
+    }
+  }
+  .foot-links {
+    margin-top: 4rem;
+    .foot-dropdown {
+      list-style: none;
+      margin-bottom: 3rem;
+      a {
+        text-decoration: none;
+        color: $base;
+        font-weight: 700;
+      }
+      .dropdown-content {
+        margin-top: 1rem;
+        list-style: none;
+        .link {
+          margin: 1rem 0;
+          a {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+.attribution {
+  color: $base;
+  font-weight: 700;
+  a {
+    text-decoration: none;
+    color: $lightRed;
+  }
+}

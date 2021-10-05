@@ -1,0 +1,170 @@
+header {
+  background-image: $introGrade;
+  height: 100%;
+  border-radius: 0 0 0 5rem;
+  position: relative;
+}
+.topper {
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav-logo {
+    height: 2rem;
+    vertical-align: middle;
+  }
+  .link-holder {
+    .links {
+      list-style: none;
+      display: none;
+      .dropdown {
+        a {
+          text-decoration: none;
+        }
+        .dropdown-content {
+          list-style: none;
+          .link {
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .log-btn,
+    .sign-btn {
+      display: none;
+    }
+    .log-btn {
+    }
+    .sign-btn {
+    }
+  }
+  &.active {
+    position: relative;
+    .link-holder {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 4rem;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      background-color: $base;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .links {
+        flex-direction: column;
+        display: flex;
+      }
+      .log-btn,
+      .sign-btn {
+        display: flex;
+        padding: 1rem 2.5rem;
+      }
+      .log-btn {
+      }
+      .sign-btn {
+      }
+    }
+  }
+  .hamburger {
+    display: flex;
+    height: 1rem;
+    width: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    transform-origin: left center;
+    transition: ease 0.3s;
+    div {
+      height: 2px;
+      background-color: $base;
+    }
+    &.active {
+      justify-content: center;
+      div {
+        margin: -1px;
+      }
+      div:nth-child(2) {
+        transition: ease 0.3s;
+        width: 0;
+        opacity: 0%;
+      }
+      div:nth-child(1) {
+        transition: ease 0.3s;
+        transform: rotate(45deg);
+      }
+      div:nth-child(3) {
+        transition: ease 0.3s;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+.hero-box {
+  margin: 7rem 0;
+  .hero-msg {
+    text-align: center;
+    color: $base;
+    h1 {
+      padding: 0 0.5rem;
+      font-size: 2rem;
+      color: $base;
+      margin-bottom: 1rem;
+    }
+    p {
+      padding: 0 1rem;
+    }
+  }
+  .hero-btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-top: 3rem;
+    .start-btn {
+      padding: 0.75rem 1rem;
+      background-color: $base;
+      border-radius: 2rem;
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        font-family: "Ubuntu", sans-serif;
+        color: $lightRed;
+        vertical-align: middle;
+      }
+    }
+    .learn-btn {
+      padding: 0.75rem 1.25rem;
+      border: 1px solid $base;
+      border-radius: 2rem;
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        font-family: "Ubuntu", sans-serif;
+        color: $base;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.texture {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  background-size: 350%;
+  background-position: -20.5rem -15rem;
+  opacity: 100%;
+  border-radius: 0 0 0 5rem;
+  // mix-blend-mode: screen;
+  background-image: url("/images/bg-pattern-intro.svg");
+}
