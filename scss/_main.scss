@@ -4,27 +4,85 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  @include breakpoint-up(medium) {
+    margin-top: 1rem;
+  }
 }
 .top-contain {
   padding: 2rem 1rem;
   height: 100%;
+  @include breakpoint-up(medium) {
+    padding: 0 0 2rem 0;
+    position: relative;
+  }
+  .top-title {
+    @include breakpoint-up(medium) {
+      position: absolute;
+      right: 0;
+      left: 0;
+      text-align: center;
+      top: 6rem;
+    }
+    @include breakpoint-up(x-large) {
+      font-size: 2rem;
+    }
+  }
   .future-specs {
     margin-top: 2rem;
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
     .chart {
       background-image: url("/images/illustration-editor-mobile.svg");
       height: 21rem;
       background-repeat: no-repeat;
       background-position: center;
       margin-bottom: 2rem;
-    }
-    .spec {
-      padding: 1rem 1.25rem;
-      h1 {
-        padding: 0 2rem;
-        margin-bottom: 1rem;
+      @include breakpoint-up(medium) {
+        background-image: url("/images/illustration-editor-desktop.svg");
+        width: 150rem;
+        height: 40rem;
+        background-position: 1.5rem;
+        background-size: 130%;
       }
-      p {
-        line-height: 1.5rem;
+      @include breakpoint-up(x-large) {
+        width: 60rem;
+        height: 50rem;
+        background-position: 20.25rem;
+        background-size: 829px;
+        overflow: hidden;
+      }
+    }
+    .spec-hold {
+      @include breakpoint-up(medium) {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        justify-content: center;
+      }
+      @include breakpoint-up(x-large) {
+        width: 62rem;
+      }
+      .spec {
+        padding: 1rem 1.25rem;
+        @include breakpoint-up(medium) {
+          padding-left: 5rem;
+          padding-right: 0;
+        }
+        @include breakpoint-up(x-large) {
+          padding-left: 15rem;
+        }
+        h1 {
+          padding: 0 2rem;
+          margin-bottom: 1rem;
+          @include breakpoint-up(medium) {
+            padding: 0;
+          }
+        }
+        p {
+          line-height: 1.5rem;
+        }
       }
     }
   }
@@ -33,17 +91,34 @@ main {
   height: 100%;
   position: relative;
   margin-top: 15rem;
+  @include breakpoint-up(medium) {
+    margin-top: 0;
+  }
   .mobile {
     position: absolute;
     background-image: url("/images/illustration-phones.svg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    height: 25rem;
+    height: 33rem;
     right: 0;
     left: 0;
     top: -14rem;
     z-index: 5;
+    @include breakpoint-up(x-small) {
+      background-size: 75%;
+    }
+    @include breakpoint-up(small) {
+      background-size: 67%;
+    }
+    @media (min-width: 830px) {
+      background-size: 60%;
+    }
+    @include breakpoint-up(medium) {
+      background-size: 48%;
+      background-position: left;
+      top: -4rem;
+    }
   }
   .state-info {
     padding: 14rem 2rem 6rem;
@@ -51,9 +126,18 @@ main {
     position: relative;
     z-index: 2;
     border-radius: 0 5rem 0 5rem;
+    @include breakpoint-up(small) {
+      padding: 20rem 2rem 6rem;
+    }
+    @include breakpoint-up(medium) {
+      padding: 6rem 3rem 4rem 28rem;
+    }
+    @media (min-width: 950px) {
+      padding: 8rem 5rem 6rem 32rem;
+    }
     .circles {
       background-image: url("/images/bg-pattern-circles.svg");
-      height: 25rem;
+      height: 100%;
       position: absolute;
       background-size: 150%;
       background-position: -6.75rem -13.75rem;
@@ -63,15 +147,29 @@ main {
       top: 0;
       z-index: -1;
       border-radius: 0 5rem 0 0;
+      @include breakpoint-up(small) {
+        background-position: -11.75rem -38.75rem;
+        // background-size: 125%;
+      }
+      @include breakpoint-up(medium) {
+        background-position: -13rem -26rem;
+        background-size: 80%;
+        border-radius: 0 0 0 3rem;
+      }
     }
-    h1 {
-      font-size: 2rem;
-      color: $base;
-    }
-    p {
-      margin-top: 1rem;
-      color: $base;
-      line-height: 1.5rem;
+    .mid-text {
+      @include breakpoint-up(medium) {
+        text-align: start;
+      }
+      h1 {
+        font-size: 2rem;
+        color: $base;
+      }
+      p {
+        margin-top: 1rem;
+        color: $base;
+        line-height: 1.5rem;
+      }
     }
   }
 }
@@ -79,16 +177,36 @@ main {
   padding: 2rem 1rem;
   height: 100%;
   margin-top: 2rem;
+  @include breakpoint-up(medium) {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+  }
   .laptop {
     background-image: url("/images/illustration-laptop-mobile.svg");
     height: 21rem;
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 2rem;
+    @include breakpoint-up(medium) {
+      width: 160rem;
+      height: 40rem;
+      background-image: url("/images/illustration-laptop-desktop.svg");
+      background-size: 140%;
+      background-position: right;
+    }
   }
   .lap-specs {
     margin: 1rem 0;
     padding: 0 2.325rem;
+    @include breakpoint-up(medium) {
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 6rem;
+      padding-left: 0;
+    }
     .spec {
       h1 {
         margin-bottom: 1rem;

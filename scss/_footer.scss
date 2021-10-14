@@ -8,8 +8,22 @@ footer {
   align-items: center;
   text-align: center;
   border-radius: 0 5rem 0 0;
+  @include breakpoint-up(small) {
+    text-align: start;
+  }
+  @include breakpoint-up(x-large) {
+    align-items: flex-start;
+  }
 }
 .foot-nav {
+  @include breakpoint-up(small) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  @include breakpoint-up(x-large) {
+    width: 70%;
+  }
   a {
     .foot-logo {
       height: 2rem;
@@ -17,6 +31,11 @@ footer {
   }
   .foot-links {
     margin-top: 4rem;
+    @include breakpoint-up(small) {
+      display: flex;
+      flex-direction: row;
+      margin-top: 0.5rem;
+    }
     .foot-dropdown {
       list-style: none;
       margin-bottom: 3rem;
@@ -24,14 +43,22 @@ footer {
         text-decoration: none;
         color: $base;
         font-weight: 700;
+        padding: 1rem 2rem;
       }
-      .dropdown-content {
-        margin-top: 1rem;
+      .foot-dropdown-content {
+        margin-top: 2rem;
         list-style: none;
+        @include breakpoint-up(medium) {
+          margin-right: 6rem;
+        }
         .link {
           margin: 1rem 0;
           a {
             font-weight: 400;
+            text-decoration: none;
+            &:hover {
+              font-weight: 700;
+            }
           }
         }
       }
@@ -41,6 +68,7 @@ footer {
 .attribution {
   color: $base;
   font-weight: 700;
+  align-self: center;
   a {
     text-decoration: none;
     color: $lightRed;
