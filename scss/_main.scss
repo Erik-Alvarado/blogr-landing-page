@@ -60,13 +60,7 @@ main {
         background-position: 11rem;
       }
       @media (min-width: 1700px) {
-        background-position: 14rem;
-      }
-      @media (min-width: 1800px) {
-        background-position: 17.5rem;
-      }
-      @media (min-width: 1900px) {
-        background-position: 20.25rem;
+        background-position: 6rem;
       }
     }
     .spec-hold {
@@ -183,13 +177,13 @@ main {
       padding: 8rem 5rem 6rem 40rem;
     }
     @include breakpoint-up(x-large) {
-      padding: 8rem 5rem 6rem 45rem;
+      padding: 8rem 13rem 6rem 45rem;
     }
     @media (min-width: 1550px) {
-      padding: 8rem 5rem 6rem 50rem;
+      padding: 8rem 13rem 6rem 50rem;
     }
     @media (min-width: 1800px) {
-      padding: 8rem 5rem 6rem 55rem;
+      padding: 8rem 13rem 6rem 60rem;
     }
     .circles {
       background-image: url("/images/bg-pattern-circles.svg");
@@ -212,10 +206,12 @@ main {
         background-size: 80%;
         border-radius: 0 0 0 3rem;
       }
+      @include breakpoint-up(large) {
+        border-radius: 0 0 0 5rem;
+      }
       @include breakpoint-up(x-large) {
         background-position: -13.25rem -32rem;
         background-size: 70%;
-        border-radius: 0 0 0 5rem;
       }
       @media (min-width: 1600px) {
         background-position: -14.5rem -32rem;
@@ -249,6 +245,9 @@ main {
     display: flex;
     flex-direction: row;
   }
+  @include breakpoint-up(x-large) {
+    margin-top: 5rem;
+  }
   .laptop {
     background-image: url("/images/illustration-laptop-mobile.svg");
     height: 21rem;
@@ -261,6 +260,14 @@ main {
       background-image: url("/images/illustration-laptop-desktop.svg");
       background-size: 140%;
       background-position: right;
+    }
+    @media (min-width: 1130px) {
+      background-size: 896px;
+      background-position: -16rem;
+      height: 46rem;
+    }
+    @media (min-width: 1700px) {
+      background-position: 0;
     }
   }
   .lap-specs {
@@ -275,6 +282,9 @@ main {
       padding-left: 0;
     }
     .spec {
+      @include breakpoint-up(x-large) {
+        padding: 0 6rem 0 1rem;
+      }
       h1 {
         margin-bottom: 1rem;
       }

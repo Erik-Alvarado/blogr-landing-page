@@ -701,19 +701,7 @@ main {
 
 @media (min-width: 1700px) {
   .top-contain .future-specs .chart {
-    background-position: 14rem;
-  }
-}
-
-@media (min-width: 1800px) {
-  .top-contain .future-specs .chart {
-    background-position: 17.5rem;
-  }
-}
-
-@media (min-width: 1900px) {
-  .top-contain .future-specs .chart {
-    background-position: 20.25rem;
+    background-position: 6rem;
   }
 }
 
@@ -902,19 +890,19 @@ main {
 
 @media (min-width: 87em) {
   .mid-contain .state-info {
-    padding: 8rem 5rem 6rem 45rem;
+    padding: 8rem 13rem 6rem 45rem;
   }
 }
 
 @media (min-width: 1550px) {
   .mid-contain .state-info {
-    padding: 8rem 5rem 6rem 50rem;
+    padding: 8rem 13rem 6rem 50rem;
   }
 }
 
 @media (min-width: 1800px) {
   .mid-contain .state-info {
-    padding: 8rem 5rem 6rem 55rem;
+    padding: 8rem 13rem 6rem 60rem;
   }
 }
 
@@ -946,11 +934,16 @@ main {
   }
 }
 
+@media (min-width: 64em) {
+  .mid-contain .state-info .circles {
+    border-radius: 0 0 0 5rem;
+  }
+}
+
 @media (min-width: 87em) {
   .mid-contain .state-info .circles {
     background-position: -13.25rem -32rem;
     background-size: 70%;
-    border-radius: 0 0 0 5rem;
   }
 }
 
@@ -997,6 +990,12 @@ main {
   }
 }
 
+@media (min-width: 87em) {
+  .bot-contain {
+    margin-top: 5rem;
+  }
+}
+
 .bot-contain .laptop {
   background-image: url("/images/illustration-laptop-mobile.svg");
   height: 21rem;
@@ -1015,6 +1014,20 @@ main {
   }
 }
 
+@media (min-width: 1130px) {
+  .bot-contain .laptop {
+    background-size: 896px;
+    background-position: -16rem;
+    height: 46rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .bot-contain .laptop {
+    background-position: 0;
+  }
+}
+
 .bot-contain .lap-specs {
   margin: 1rem 0;
   padding: 0 2.325rem;
@@ -1028,6 +1041,12 @@ main {
     justify-content: center;
     padding-right: 6rem;
     padding-left: 0;
+  }
+}
+
+@media (min-width: 87em) {
+  .bot-contain .lap-specs .spec {
+    padding: 0 6rem 0 1rem;
   }
 }
 
